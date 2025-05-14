@@ -129,6 +129,7 @@ def get_update_content(m, note_file, pdfs_path, proxy):
             if os.path.exists(pdf_path):
                 replaced_literature = ""
             else:
+                print("success")
                 replaced_literature = "- [<mark></mark>] [{}]({}). {}. {}".format(
                     bib['title'].replace("\n",""), bib["pdf_link"],bib["author"],bib["journal"] if bib["journal"]!="" else "unknown")
             replace_dict[literature] = replaced_literature
